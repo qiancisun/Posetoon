@@ -104,7 +104,7 @@ several gigabytes.
 |---|---|---|
 | AP-10K | animal pose annotations; the pose estimator was pretrained on it | https://github.com/AlexTheBad/AP-10K |
 | Stanford Dogs | breed photographs, used to build the twelve templates | http://vision.stanford.edu/aditya86/ImageNetDogs/ |
-| SyDog-Video | synthetic dog video annotations | https://github.com/MoritzKappel/SyDog-Video |
+| SyDog-Video | synthetic dog video annotations | https://cvssp.org/data/SyDogVideo/ |
 
 The copies used here are mirrored in one archive, in the directory layout the
 scripts expect:
