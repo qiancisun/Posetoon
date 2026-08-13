@@ -79,6 +79,77 @@ marimo edit "project pipeline main code/tool notebook/evaluation_notebook.py"
 
 ---
 
+## Datasets
+
+None of the datasets are committed here — together they run to several
+gigabytes, more than a repository should carry. All three are public and can be
+obtained from their original sources:
+
+| Dataset | Original source |
+|---|---|
+| AP-10K | https://github.com/AlexTheBad/AP-10K |
+| Stanford Dogs | http://vision.stanford.edu/aditya86/ImageNetDogs/ |
+| SyDog-Video | https://github.com/MoritzKappel/SyDog-Video |
+
+The copies actually used here are also mirrored in a single archive, in the
+directory layout the scripts expect (`ap10k/`, `sydogvideo/`, and the Stanford
+Dogs `Images/` folder):
+
+**https://drive.google.com/file/d/1F_U4w2fFzI20pf9DMg88siP4BOTmntfv/view?usp=sharing**
+
+What each was used for is set out below.
+
+### AP-10K
+
+Pose annotations for animals, used for two things: the pose estimator this
+project runs was pretrained on it, and its ground-truth keypoints were used to
+study how much dog body proportion actually varies.
+
+- Official: https://github.com/AlexTheBad/AP-10K
+- What was taken from it: 1,129 dog annotations, of which 269 survived removing
+  those with no annotated spine points and applying a side-on view filter
+- What that established: leg-to-spine ratio varies by a factor of 2.37 between
+  the 90th and 10th percentile, so body proportion is a real signal
+- Note: this study set the thresholds for an earlier three-tier size system,
+  which the twelve breed templates later replaced. It is background to the work
+  rather than the basis of the delivered system.
+
+### Stanford Dogs
+
+Breed photographs, used to build the twelve breed templates.
+
+- Official: http://vision.stanford.edu/aditya86/ImageNetDogs/
+- What was taken from it: 52-60 photographs per breed, for twelve breeds
+- Derived artefact committed to this repository:
+  `results and data/breed_templates.json` — per-breed bone measurements,
+  appearance parameters, sample count and interquartile range
+
+### SyDog-Video
+
+Synthetic dog video annotations, downloaded for evaluation but not used in the
+delivered results.
+
+- Official: https://github.com/MoritzKappel/SyDog-Video
+
+### Video footage
+
+The clips in `Demo video/` are results, not sources. Source footage came from
+Pexels and Pixabay under their free licences, plus clips recorded by the author.
+Screening used `check_videos.py`: side-on view, one dog, at least 40 usable
+frames, no cuts.
+
+### Rebuilding the templates
+
+With Stanford Dogs downloaded and its path set inside the script:
+
+```bash
+python 0_build_breed_templates.py
+```
+
+This is the only stage that needs a dataset; everything else runs from a video.
+
+---
+
 ## Key findings
 
 **The automatic quality screen does not predict quality.** Most clips a human
