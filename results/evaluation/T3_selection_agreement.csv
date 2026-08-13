@@ -1,0 +1,7 @@
+measure,value,share,extra
+clips with a template,42,,
+classifier and geometry agree,5,12%,
+... among A-grade only,2,10%,
+"combined-score margin (median, min, max)",0.221,0.007,0.634
+alpha = 0.35,37,88%,
+alpha = 0.60,5,12%,

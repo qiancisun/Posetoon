@@ -1,0 +1,553 @@
+{
+  "target_spine": 200.0,
+  "source": "Stanford Dogs, MMPose inference (no GT keypoints exist for this dataset; the deployed system is inference-only too, so this is the matching domain)",
+  "spine_split": "asymmetric, pelvis = tail*0.55 + hips*0.45, matching measure_skeleton()",
+  "view_filter": {
+    "min_spine_px": 40.0,
+    "min_horizontality": 0.7,
+    "score_threshold": 0.35
+  },
+  "skipped": [],
+  "templates": {
+    "Basset Hound": {
+      "measure": {
+        "lower": 91.42099098108255,
+        "upper": 91.42099098108255,
+        "head": 90.0,
+        "hum": 37.855991894631075,
+        "rad": 31.292344150332084,
+        "fem": 41.58338622885835,
+        "tib": 41.1117984191423
+      },
+      "measure_raw": {
+        "lower": 91.42099098108255,
+        "upper": 91.42099098108255,
+        "head": 95.47993926679719,
+        "hum": 37.855991894631075,
+        "rad": 31.292344150332084,
+        "fem": 41.58338622885835,
+        "tib": 41.1117984191423
+      },
+      "iqr": {
+        "lower": 10.339528616366138,
+        "upper": 10.339528616366152,
+        "head": 92.92945160398718,
+        "hum": 23.437020827541183,
+        "rad": 17.35520296719232,
+        "fem": 27.9561390037737,
+        "tib": 17.60690258576578
+      },
+      "n_samples": 60,
+      "folder": "n02088238-basset",
+      "appearance": {
+        "ear_type": "floppy",
+        "ear_len": 0.375,
+        "ear_width": 0.068,
+        "tail_len": 0.3,
+        "tail_curl": 0.05,
+        "tail_set": 0.35,
+        "muzzle_len": 0.45,
+        "coat": "short"
+      },
+      "appearance_source": "breeds.py:Basset Hound",
+      "head_measured_ratio": 0.477,
+      "head_authored_ratio": 0.45,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Cardigan Corgi": {
+      "measure": {
+        "lower": 89.10201583858175,
+        "upper": 89.10201583858175,
+        "head": 80.0,
+        "hum": 36.436407372838005,
+        "rad": 30.45202556222948,
+        "fem": 40.95338451841878,
+        "tib": 41.27708374533806
+      },
+      "measure_raw": {
+        "lower": 89.10201583858175,
+        "upper": 89.10201583858175,
+        "head": 79.66555500292367,
+        "hum": 36.436407372838005,
+        "rad": 30.45202556222948,
+        "fem": 40.95338451841878,
+        "tib": 41.27708374533806
+      },
+      "iqr": {
+        "lower": 10.64600730539901,
+        "upper": 10.646007305398996,
+        "head": 47.99577354414337,
+        "hum": 22.340438486748656,
+        "rad": 16.202875601372753,
+        "fem": 24.318804411605242,
+        "tib": 15.12202734878609
+      },
+      "n_samples": 60,
+      "folder": "n02113186-Cardigan",
+      "appearance": {
+        "ear_type": "erect",
+        "ear_len": 0.16,
+        "ear_width": 0.058,
+        "tail_len": 0.32,
+        "tail_curl": 0.15,
+        "tail_set": 0.25,
+        "muzzle_len": 0.4,
+        "coat": "medium"
+      },
+      "appearance_source": "breeds.py:Cardigan Corgi",
+      "head_measured_ratio": 0.398,
+      "head_authored_ratio": 0.4,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Beagle": {
+      "measure": {
+        "lower": 92.20290035289946,
+        "upper": 92.20290035289946,
+        "head": 84.0,
+        "hum": 45.18041304044514,
+        "rad": 35.12031254457098,
+        "fem": 51.220662770129685,
+        "tib": 43.274781216859665
+      },
+      "measure_raw": {
+        "lower": 92.20290035289946,
+        "upper": 92.20290035289946,
+        "head": 100.02988426027154,
+        "hum": 45.18041304044514,
+        "rad": 35.12031254457098,
+        "fem": 51.220662770129685,
+        "tib": 43.274781216859665
+      },
+      "iqr": {
+        "lower": 12.392411835179203,
+        "upper": 12.392411835179189,
+        "head": 78.89484250182093,
+        "hum": 26.440666298228912,
+        "rad": 22.01018611740696,
+        "fem": 22.526897301035575,
+        "tib": 21.40603314097107
+      },
+      "n_samples": 60,
+      "folder": "n02088364-beagle",
+      "appearance": {
+        "ear_type": "floppy",
+        "ear_len": 0.255,
+        "ear_width": 0.058,
+        "tail_len": 0.3,
+        "tail_curl": 0.25,
+        "tail_set": 0.55,
+        "muzzle_len": 0.42,
+        "coat": "short"
+      },
+      "appearance_source": "breeds.py:Beagle",
+      "head_measured_ratio": 0.5,
+      "head_authored_ratio": 0.42,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Labrador": {
+      "measure": {
+        "lower": 89.51640199022815,
+        "upper": 89.51640199022815,
+        "head": 82.0,
+        "hum": 56.83726037700256,
+        "rad": 53.11333511520701,
+        "fem": 58.081764597346634,
+        "tib": 50.527251892072826
+      },
+      "measure_raw": {
+        "lower": 89.51640199022815,
+        "upper": 89.51640199022815,
+        "head": 81.69875896503993,
+        "hum": 56.83726037700256,
+        "rad": 53.11333511520701,
+        "fem": 58.081764597346634,
+        "tib": 50.527251892072826
+      },
+      "iqr": {
+        "lower": 13.718652989631906,
+        "upper": 13.718652989631906,
+        "head": 65.51312186770639,
+        "hum": 28.83062936778809,
+        "rad": 32.39234747942523,
+        "fem": 40.061466802577236,
+        "tib": 29.655343476025237
+      },
+      "n_samples": 60,
+      "folder": "n02099712-Labrador_retriever",
+      "appearance": {
+        "ear_type": "floppy",
+        "ear_len": 0.235,
+        "ear_width": 0.052,
+        "tail_len": 0.34,
+        "tail_curl": 0.08,
+        "tail_set": 0.1,
+        "muzzle_len": 0.41,
+        "coat": "short"
+      },
+      "appearance_source": "breeds.py:Labrador",
+      "head_measured_ratio": 0.408,
+      "head_authored_ratio": 0.41,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "German Shepherd": {
+      "measure": {
+        "lower": 91.91452119042438,
+        "upper": 91.91452119042438,
+        "head": 83.0,
+        "hum": 50.87625914453159,
+        "rad": 38.08830441688079,
+        "fem": 62.55780560711639,
+        "tib": 43.95401845022212
+      },
+      "measure_raw": {
+        "lower": 91.91452119042438,
+        "upper": 91.91452119042438,
+        "head": 82.91795159347797,
+        "hum": 50.87625914453159,
+        "rad": 38.08830441688079,
+        "fem": 62.55780560711639,
+        "tib": 43.95401845022212
+      },
+      "iqr": {
+        "lower": 14.692004806166992,
+        "upper": 14.692004806167006,
+        "head": 51.15067103066465,
+        "hum": 21.737163611307807,
+        "rad": 15.630276522369222,
+        "fem": 22.241219779438026,
+        "tib": 20.086609666526357
+      },
+      "n_samples": 60,
+      "folder": "n02106662-German_shepherd",
+      "appearance": {
+        "ear_type": "erect",
+        "ear_len": 0.19,
+        "ear_width": 0.062,
+        "tail_len": 0.38,
+        "tail_curl": 0.15,
+        "tail_set": -0.15,
+        "muzzle_len": 0.415,
+        "coat": "medium"
+      },
+      "appearance_source": "breeds.py:German Shepherd",
+      "head_measured_ratio": 0.415,
+      "head_authored_ratio": 0.415,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Border Collie": {
+      "measure": {
+        "lower": 88.35560892799933,
+        "upper": 88.35560892799933,
+        "head": 77.0,
+        "hum": 58.51891449992429,
+        "rad": 49.14366498782877,
+        "fem": 58.206282594814226,
+        "tib": 49.607350796094835
+      },
+      "measure_raw": {
+        "lower": 88.35560892799933,
+        "upper": 88.35560892799933,
+        "head": 77.46063564208214,
+        "hum": 58.51891449992429,
+        "rad": 49.14366498782877,
+        "fem": 58.206282594814226,
+        "tib": 49.607350796094835
+      },
+      "iqr": {
+        "lower": 20.945876867121513,
+        "upper": 20.945876867121513,
+        "head": 44.87684525970585,
+        "hum": 37.230434842313656,
+        "rad": 26.07347058774704,
+        "fem": 29.261553763763693,
+        "tib": 27.324720909453077
+      },
+      "n_samples": 60,
+      "folder": "n02106166-Border_collie",
+      "appearance": {
+        "ear_type": "semi_erect",
+        "ear_len": 0.13,
+        "ear_width": 0.052,
+        "tail_len": 0.34,
+        "tail_curl": 0.2,
+        "tail_set": -0.05,
+        "muzzle_len": 0.385,
+        "coat": "long"
+      },
+      "appearance_source": "breeds.py:Border Collie",
+      "head_measured_ratio": 0.387,
+      "head_authored_ratio": 0.385,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Whippet": {
+      "measure": {
+        "lower": 94.94786524960465,
+        "upper": 94.94786524960465,
+        "head": 113.99999999999999,
+        "hum": 59.55174840581222,
+        "rad": 51.140723894140336,
+        "fem": 69.24208318163838,
+        "tib": 58.371919838293344
+      },
+      "measure_raw": {
+        "lower": 94.94786524960465,
+        "upper": 94.94786524960465,
+        "head": 113.67516757017536,
+        "hum": 59.55174840581222,
+        "rad": 51.140723894140336,
+        "fem": 69.24208318163838,
+        "tib": 58.371919838293344
+      },
+      "iqr": {
+        "lower": 11.648632436503632,
+        "upper": 11.64863243650359,
+        "head": 50.783173837384325,
+        "hum": 18.8445212420813,
+        "rad": 26.9494217560284,
+        "fem": 20.918185625135514,
+        "tib": 25.23973082804465
+      },
+      "n_samples": 60,
+      "folder": "n02091134-whippet",
+      "appearance": {
+        "ear_type": "semi_erect",
+        "ear_len": 0.08,
+        "ear_width": 0.032,
+        "tail_len": 0.42,
+        "tail_curl": 0.15,
+        "tail_set": -0.55,
+        "muzzle_len": 0.57,
+        "coat": "short"
+      },
+      "appearance_source": "breeds.py:Whippet",
+      "head_measured_ratio": 0.568,
+      "head_authored_ratio": 0.57,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Great Dane": {
+      "measure": {
+        "lower": 97.66431811480874,
+        "upper": 97.66431811480876,
+        "head": 104.0,
+        "hum": 72.54604646628046,
+        "rad": 62.57240442519491,
+        "fem": 71.18886089155102,
+        "tib": 59.107321504791905
+      },
+      "measure_raw": {
+        "lower": 97.66431811480874,
+        "upper": 97.66431811480876,
+        "head": 104.17922697193089,
+        "hum": 72.54604646628046,
+        "rad": 62.57240442519491,
+        "fem": 71.18886089155102,
+        "tib": 59.107321504791905
+      },
+      "iqr": {
+        "lower": 5.856647969831371,
+        "upper": 5.856647969831357,
+        "head": 89.61312845671694,
+        "hum": 37.926045418146956,
+        "rad": 34.10719045455561,
+        "fem": 15.377773343683614,
+        "tib": 27.30507648282834
+      },
+      "n_samples": 60,
+      "folder": "n02109047-Great_Dane",
+      "appearance": {
+        "ear_type": "semi_erect",
+        "ear_len": 0.13,
+        "ear_width": 0.05,
+        "tail_len": 0.38,
+        "tail_curl": 0.05,
+        "tail_set": -0.05,
+        "muzzle_len": 0.52,
+        "coat": "short"
+      },
+      "appearance_source": "breeds.py:Great Dane",
+      "head_measured_ratio": 0.521,
+      "head_authored_ratio": 0.52,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Pug": {
+      "measure": {
+        "lower": 93.68554480616216,
+        "upper": 93.68554480616216,
+        "head": 32.0,
+        "hum": 45.23828169740549,
+        "rad": 38.723052580282896,
+        "fem": 50.06593804308416,
+        "tib": 45.027398034863126
+      },
+      "measure_raw": {
+        "lower": 93.68554480616216,
+        "upper": 93.68554480616216,
+        "head": 84.18625102983965,
+        "hum": 45.23828169740549,
+        "rad": 38.723052580282896,
+        "fem": 50.06593804308416,
+        "tib": 45.027398034863126
+      },
+      "iqr": {
+        "lower": 12.501722424092847,
+        "upper": 12.501722424092861,
+        "head": 62.538228722796916,
+        "hum": 24.645263597644984,
+        "rad": 18.0262402022815,
+        "fem": 24.896670447348725,
+        "tib": 20.113338286966872
+      },
+      "n_samples": 59,
+      "folder": "n02110958-pug",
+      "appearance": {
+        "ear_type": "floppy",
+        "ear_len": 0.08,
+        "ear_width": 0.042,
+        "tail_len": 0.14,
+        "tail_curl": 0.95,
+        "tail_set": 0.95,
+        "muzzle_len": 0.16,
+        "coat": "short"
+      },
+      "appearance_source": "breeds.py:Pug",
+      "head_measured_ratio": 0.421,
+      "head_authored_ratio": 0.16,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Pekingese": {
+      "measure": {
+        "lower": 92.1451790765565,
+        "upper": 92.1451790765565,
+        "head": 36.0,
+        "hum": 42.667667870779596,
+        "rad": 32.18715764023683,
+        "fem": 43.23883203095589,
+        "tib": 41.41733338790573
+      },
+      "measure_raw": {
+        "lower": 92.1451790765565,
+        "upper": 92.1451790765565,
+        "head": 81.40181713286015,
+        "hum": 42.667667870779596,
+        "rad": 32.18715764023683,
+        "fem": 43.23883203095589,
+        "tib": 41.41733338790573
+      },
+      "iqr": {
+        "lower": 12.531394171620462,
+        "upper": 12.531394171620462,
+        "head": 50.55400464580255,
+        "hum": 16.62397603162836,
+        "rad": 17.747902263645724,
+        "fem": 25.034091173654055,
+        "tib": 15.73584413482331
+      },
+      "n_samples": 52,
+      "folder": "n02086079-Pekinese",
+      "appearance": {
+        "ear_type": "floppy",
+        "ear_len": 0.285,
+        "ear_width": 0.058,
+        "tail_len": 0.22,
+        "tail_curl": 0.85,
+        "tail_set": 0.85,
+        "muzzle_len": 0.18,
+        "coat": "long"
+      },
+      "appearance_source": "breeds.py:Pekingese",
+      "head_measured_ratio": 0.407,
+      "head_authored_ratio": 0.18,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Siberian Husky": {
+      "measure": {
+        "lower": 86.24600332049394,
+        "upper": 86.24600332049395,
+        "head": 75.0,
+        "hum": 51.456548902596765,
+        "rad": 35.80411256014875,
+        "fem": 55.371405573414336,
+        "tib": 44.142212973998205
+      },
+      "measure_raw": {
+        "lower": 86.24600332049394,
+        "upper": 86.24600332049395,
+        "head": 74.62249299528762,
+        "hum": 51.456548902596765,
+        "rad": 35.80411256014875,
+        "fem": 55.371405573414336,
+        "tib": 44.142212973998205
+      },
+      "iqr": {
+        "lower": 13.850083521059474,
+        "upper": 13.850083521059474,
+        "head": 61.315902039541896,
+        "hum": 23.34565639764196,
+        "rad": 17.821516277603926,
+        "fem": 22.67351951068069,
+        "tib": 15.50541613283508
+      },
+      "n_samples": 60,
+      "folder": "n02110185-Siberian_husky",
+      "appearance": {
+        "ear_type": "erect",
+        "ear_len": 0.17,
+        "ear_width": 0.06,
+        "tail_len": 0.36,
+        "tail_curl": 0.55,
+        "tail_set": 0.45,
+        "muzzle_len": 0.375,
+        "coat": "long"
+      },
+      "appearance_source": "breeds.py:Siberian Husky",
+      "head_measured_ratio": 0.373,
+      "head_authored_ratio": 0.375,
+      "head_source": "authored (see note in step_B1)"
+    },
+    "Samoyed": {
+      "measure": {
+        "lower": 90.66359283284976,
+        "upper": 90.66359283284976,
+        "head": 81.0,
+        "hum": 52.78411989360217,
+        "rad": 41.96416132482217,
+        "fem": 54.16985066601892,
+        "tib": 44.31145283768842
+      },
+      "measure_raw": {
+        "lower": 90.66359283284976,
+        "upper": 90.66359283284976,
+        "head": 80.93609395778441,
+        "hum": 52.78411989360217,
+        "rad": 41.96416132482217,
+        "fem": 54.16985066601892,
+        "tib": 44.31145283768842
+      },
+      "iqr": {
+        "lower": 11.088540371821736,
+        "upper": 11.088540371821708,
+        "head": 51.08517936404506,
+        "hum": 18.78399881022461,
+        "rad": 16.986771127964474,
+        "fem": 16.6183919292691,
+        "tib": 13.430027284066576
+      },
+      "n_samples": 60,
+      "folder": "n02111889-Samoyed",
+      "appearance": {
+        "ear_type": "erect",
+        "ear_len": 0.14,
+        "ear_width": 0.054,
+        "tail_len": 0.34,
+        "tail_curl": 0.9,
+        "tail_set": 0.95,
+        "muzzle_len": 0.405,
+        "coat": "long"
+      },
+      "appearance_source": "breeds.py:Samoyed",
+      "head_measured_ratio": 0.405,
+      "head_authored_ratio": 0.405,
+      "head_source": "authored (see note in step_B1)"
+    }
+  }
+}

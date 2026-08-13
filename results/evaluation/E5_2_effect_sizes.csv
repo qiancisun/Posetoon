@@ -1,0 +1,7 @@
+measurement,A median,C median,effect size,separates?
+frames,242,213,0.04,no
+frame rate,30,30,0.07,no
+duplicate-frame rate,0.001,0,0.41,no
+sharpness,251,143,0.14,no
+brightness,130,125,0.12,no
+outliers rejected,30,55,0.88,yes

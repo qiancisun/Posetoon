@@ -1,0 +1,64 @@
+# NOTE ON THE DELIVERED FOLDERS
+#
+# Grades here are the author's, given by watching each clip. The automatic
+# screening in the pipeline was used as a prompt, not as the decision: on
+# these 42 clips its gait-amplitude criterion (front-limb swing >= 18 deg)
+# rejected four clips measuring 6-9 deg that were usable on inspection.
+#
+# The delivered B folder holds 7 of the 9 clips listed below. The two absent
+# were judged, on a second viewing, not to add anything the other seven do
+# not already show. The grades are left as recorded so that this file and the
+# evaluation tables in outputs/evaluation/ describe the same 42 clips.
+#
+# Clips in the folders are numbered rather than named.
+#
+# Grades -- A = demo reel   B = appendix   C = failure case
+# grade, two spaces, clip name, two spaces, note.
+
+# ---- A  (21 clips) ----
+A  12059488_1280_720_60fps_cut  Siberian Husky
+A  12200647_720_1280_30fps_cut  Labrador
+A  12716578_1280_720_30fps_cut  Whippet
+B  12753444_1280_720_24fps  Labrador
+C  15930157_720_1280_30fps_cut  high camera: corgi at an angle, rig cannot represent it
+A  16170693_720_1280_24fps_cut  Labrador
+A  17967007-hd_1280_720_30fps_cut  Labrador
+B  19887654-hd_1280_720_24fps_cut  body proportions and coat both wrong  Great Dane
+B  4166357-hd_1280_720_60fps_cut  saddled coat: single sampled base lands on the dark saddle
+A  9632185-hd_1366_720_24fps_cut  Siberian Husky
+A  blackbig  graded by eye
+A  chai  graded by eye
+A  dan  Whippet
+B  keji_cut  graded by eye
+A  MicrosoftTeams-video (11)_cut  Whippet
+B  MicrosoftTeams-video (2)  limb phase does not match tracked skeleton; short clip, low sharpness, sources disagree  Pug
+C  MicrosoftTeams-video (3)  same video as smy, different filename
+A  MicrosoftTeams-video (5)_cut  Whippet
+A  MicrosoftTeams-video (6)_cut  Labrador
+A  MicrosoftTeams-video (7)  graded by eye
+A  smy  graded by eye
+
+# ---- B  (5 clips) ----
+B  10380867-hd_720_1280_30fps  breed identification wrong
+B  10944870-hd_1920_1080_30fps  root lift 19px; outliers 47%
+A  16573252-hd_1920_1080_30fps_cut  graded by eye
+B  4405577-hd_1280_720_24fps  off-profile 9%; outliers 45%
+B  7684001-hd_1280_720_25fps_cut  duplicate frames 10%; outliers 44%
+
+# ---- C  (34 clips) ----
+C  (1)  duplicate frame rate 21%
+C  10872987-hd_1280_720_60fps  breed decision not corroborated (alpha 0.60)
+A  12438625_1280_720_50fps  graded by eye
+A  16645293_fix  Great Dane; recut at correct 60fps timing
+C  18032366-hd_720_1280_30fps  high camera: corgi shot from above
+C  19828393-hd_1280_720_24fps  breed decision not corroborated (alpha 0.60)
+C  3644110-hd_1280_720_30fps  high camera: dachshund shot from above, rig cannot represent it
+A  5540218-hd_720_1280_30fps  duplicate frame rate 17%; only 55 frames
+C  7682707-hd_1280_720_25fps  duplicate frame rate 38%; breed decision not corroborated (alpha 0.60); 84% of frames rejected as outliers
+C  7684003-uhd_3840_2160_25fps_cut  76% of frames rejected as outliers
+C  8056259-hd_1280_720_25fps  breed decision not corroborated (alpha 0.60); 70% of frames rejected as outliers
+A  bg  no gait: front limb swing 6 deg
+C  big  duplicate frame rate 41%; breed decision not corroborated (alpha 0.60)
+A  lachang  duplicate frame rate 16%
+C  MicrosoftTeams-video (1) (8)_cut  duplicate frame rate 53%
+C  MicrosoftTeams-video (2) (7)  151% of frames rejected as outliers

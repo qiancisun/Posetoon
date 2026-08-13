@@ -1,0 +1,8 @@
+measure,value,rate,
+clips the grader called a breed error,3,7% of graded,
+... of which the two sources DISagreed,2,67% (2/3),
+... disagreement rate among the rest,35,90% (35/39),
+"median margin, breed errors",0.264,,
+"median margin, the rest",0.188,,
+"median alpha, breed errors",0.350,,
+"median alpha, the rest",0.350,,

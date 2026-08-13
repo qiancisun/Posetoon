@@ -1,0 +1,43 @@
+video,status,error,seconds,frames,fps,dup_rate,dup_cadence,sharpness,brightness,outliers_rejected,quality_verdict,template,template_requested,geometry_pick,classifier_pick,sources_agree,margin,alpha,root_lift_px,spine_tail,coat_hex
+(1).mp4,ok,,,291,60.0,0.214,,55.0,124.7,46,IRREGULAR FREEZES (VFR video?) -- retiming still applies but check the result,Basset Hound,Basset Hound,Basset Hound,Basset Hound,True,0.191,0.35,0.0,synthesised,#745A52
+10380867-hd_720_1280_30fps.mp4,ok,,,95,29.97002997002997,0.0,,1124.6,114.8,8,CLEAN frame timing,Great Dane,Great Dane,Great Dane,Great Dane,True,0.593,0.35,0.0,synthesised,#3C3D57
+10872987-hd_1280_720_60fps.mp4,ok,,,694,60.0,0.009,,433.0,131.6,210,CLEAN frame timing,Pekingese,Pekingese,German Shepherd,Pekingese,False,0.051,0.6,0.0,synthesised,#010117
+10944870-hd_1920_1080_30fps.mp4,ok,,,317,29.97002997002997,0.0,,15.4,140.3,150,CLEAN frame timing | LOW SHARPNESS: expect noisy keypoints,German Shepherd,German Shepherd,Whippet,German Shepherd,False,0.537,0.35,19.2,synthesised,#946E5A
+12059488_1280_720_60fps_cut.mp4,ok,,,412,59.94005994005994,0.0,,771.4,135.2,42,CLEAN frame timing,Siberian Husky,Siberian Husky,Cardigan Corgi,Siberian Husky,False,0.039,0.35,5.5,synthesised,#ECEDEC
+12200647_720_1280_30fps_cut.mp4,ok,,,239,30.0,0.004,,1263.3,135.5,27,CLEAN frame timing,Labrador,Labrador,Beagle,Labrador,False,0.135,0.35,4.3,synthesised,#514540
+12438625_1280_720_50fps.mp4,ok,,,244,50.0,0.0,,232.9,87.8,8,CLEAN frame timing,Whippet,Whippet,Beagle,Whippet,False,0.052,0.35,6.7,synthesised,#E3FFFF
+12716578_1280_720_30fps_cut.mp4,ok,,,137,30.0,0.0,,846.9,98.7,7,CLEAN frame timing,Whippet,Whippet,Whippet,Labrador,False,0.018,0.35,7.0,synthesised,#D6CEBD
+12753444_1280_720_24fps.mp4,ok,,,655,23.976023976023978,0.003,,66.8,159.4,171,CLEAN frame timing,Labrador,Labrador,Pekingese,Labrador,False,0.049,0.35,5.3,synthesised,#4E5C74
+15930157_720_1280_30fps_cut.mp4,ok,,,232,29.97002997002997,0.0,,1311.8,169.9,12,CLEAN frame timing,Cardigan Corgi,Cardigan Corgi,Cardigan Corgi,Cardigan Corgi,True,0.339,0.35,0.0,synthesised,#B1945E
+16170693_720_1280_24fps_cut.mp4,ok,,,202,23.976023976023978,0.0,,171.1,100.8,33,CLEAN frame timing,Labrador,Labrador,Siberian Husky,Labrador,False,0.11,0.35,0.0,synthesised,#836C74
+16573252-hd_1920_1080_30fps_cut.mp4,ok,,,134,29.97002997002997,0.0,,44.2,122.1,71,CLEAN frame timing | LOW SHARPNESS: expect noisy keypoints,Labrador,Labrador,German Shepherd,Labrador,False,0.333,0.35,0.0,synthesised,#222125
+16645293_fix.mp4,ok,,,128,60.0,0.0,,4956.7,140.0,9,CLEAN frame timing,Great Dane,Great Dane,Labrador,Great Dane,False,0.326,0.35,8.0,synthesised,#FFB25C
+17967007-hd_1280_720_30fps_cut.mp4,ok,,,162,30.0,0.0,,280.3,141.9,11,CLEAN frame timing,Labrador,Labrador,Cardigan Corgi,Labrador,False,0.065,0.35,8.0,synthesised,#F3EDE4
+18032366-hd_720_1280_30fps.mp4,ok,,,126,30.0,0.0,,637.5,153.3,42,CLEAN frame timing,Cardigan Corgi,Cardigan Corgi,Whippet,Cardigan Corgi,False,0.495,0.35,12.8,synthesised,#CFBB91
+19828393-hd_1280_720_24fps.mp4,ok,,,213,24.0,0.0,,59.9,92.5,55,CLEAN frame timing,Beagle,Beagle,German Shepherd,Beagle,False,0.007,0.6,0.0,synthesised,#3B3A41
+19887654-hd_1280_720_24fps_cut.mp4,ok,,,179,23.976023976023978,0.0,,32.8,201.8,51,CLEAN frame timing | LOW SHARPNESS: expect noisy keypoints,Great Dane,Great Dane,Whippet,Great Dane,False,0.261,0.35,0.0,synthesised,#B1A59D
+3644110-hd_1280_720_30fps.mp4,ok,,,121,30.0,0.0,,2081.1,143.7,7,CLEAN frame timing,Beagle,Beagle,Basset Hound,Beagle,False,0.063,0.35,2.7,synthesised,#2D3740
+4166357-hd_1280_720_60fps_cut.mp4,ok,,,216,59.94005994005994,0.0,,689.0,66.9,34,CLEAN frame timing,Siberian Husky,Siberian Husky,Cardigan Corgi,Siberian Husky,False,0.264,0.35,0.0,synthesised,#2F1921
+4405577-hd_1280_720_24fps.mp4,ok,,,377,24.0,0.0,,146.7,167.0,168,CLEAN frame timing,German Shepherd,German Shepherd,Siberian Husky,German Shepherd,False,0.087,0.35,0.0,synthesised,#1C2225
+5540218-hd_720_1280_30fps.mp4,ok,,,55,30.0,0.167,6,301.1,149.3,0,PULLDOWN: duplicated frame every 6 frames -- run the retiming repair cell,German Shepherd,German Shepherd,Cardigan Corgi,Whippet,False,0.013,0.35,0.0,synthesised,#C27C4B
+7682707-hd_1280_720_25fps.mp4,ok,,,183,25.0,0.379,1,4.8,129.2,154,PULLDOWN: duplicated frame every 1 frames -- run the retiming repair cell | LOW SHARPNESS: expect noisy keypoints,Pekingese,Pekingese,Great Dane,Pekingese,False,0.084,0.6,0.0,synthesised,#DEBA6C
+7684001-hd_1280_720_25fps_cut.mp4,ok,,,112,25.0,0.099,1,2.7,146.0,49,PULLDOWN: duplicated frame every 1 frames -- run the retiming repair cell | LOW SHARPNESS: expect noisy keypoints,Pekingese,Pekingese,Samoyed,Pekingese,False,0.525,0.35,7.9,synthesised,#B39237
+7684003-uhd_3840_2160_25fps_cut.mp4,ok,,,97,25.0,0.0,,1.2,146.2,74,CLEAN frame timing | LOW SHARPNESS: expect noisy keypoints,Pekingese,Pekingese,Samoyed,Pekingese,False,0.539,0.35,7.7,synthesised,#B49039
+8056259-hd_1280_720_25fps.mp4,ok,,,211,25.0,0.0,,107.0,119.2,147,CLEAN frame timing,Beagle,Beagle,Whippet,Beagle,False,0.281,0.6,0.3,synthesised,#6A5546
+9632185-hd_1366_720_24fps_cut.mp4,ok,,,80,24.0,0.0,,84.8,144.8,1,CLEAN frame timing,Siberian Husky,Siberian Husky,Basset Hound,Siberian Husky,False,0.556,0.35,1.0,synthesised,#BDB7A8
+MicrosoftTeams-video (1) (8)_cut.mp4,ok,,,215,60.0,0.528,,62.1,120.5,14,IRREGULAR FREEZES (VFR video?) -- retiming still applies but check the result,Beagle,Beagle,Whippet,Beagle,False,0.464,0.35,0.0,synthesised,#906A4B
+MicrosoftTeams-video (11)_cut.mp4,ok,,,241,60.0,0.0,,119.6,106.4,25,CLEAN frame timing,Whippet,Whippet,Whippet,Whippet,True,0.452,0.35,0.0,synthesised,#0B070D
+MicrosoftTeams-video (2).mp4,ok,,,109,30.0,0.0,,25.0,190.4,1,CLEAN frame timing | LOW SHARPNESS: expect noisy keypoints,Pug,Pug,Cardigan Corgi,Pug,False,0.502,0.35,0.2,synthesised,#F4DBC6
+MicrosoftTeams-video (2) (7).mp4,ok,,,122,30.0,0.0,,142.6,106.0,184,CLEAN frame timing,Beagle,Great Dane,Samoyed,Great Dane,False,0.331,0.35,0.0,synthesised,#FFFFFF
+MicrosoftTeams-video (3).mp4,ok,,,441,60.0,0.064,,431.4,92.6,223,IRREGULAR FREEZES (VFR video?) -- retiming still applies but check the result,Samoyed,Samoyed,Cardigan Corgi,Samoyed,False,0.561,0.35,5.7,synthesised,#DBEEFF
+MicrosoftTeams-video (5)_cut.mp4,ok,,,271,30.0,0.004,,729.7,126.3,42,CLEAN frame timing,Whippet,Whippet,Whippet,Beagle,False,0.056,0.35,4.7,synthesised,#FBEFD9
+MicrosoftTeams-video (6)_cut.mp4,ok,,,286,24.0,0.018,3,19.1,133.1,69,CLEAN frame timing | LOW SHARPNESS: expect noisy keypoints,Labrador,Labrador,Samoyed,Labrador,False,0.086,0.35,8.5,synthesised,#243133
+MicrosoftTeams-video (7).mp4,ok,,,370,60.0,0.512,,328.3,105.6,71,IRREGULAR FREEZES (VFR video?) -- retiming still applies but check the result,Border Collie,Border Collie,Basset Hound,Border Collie,False,0.53,0.35,19.2,synthesised,#60687C
+bg.mp4,ok,,,535,60.0,0.002,,29.9,110.0,85,CLEAN frame timing | LOW SHARPNESS: expect noisy keypoints,Beagle,Beagle,Samoyed,Beagle,False,0.634,0.35,0.0,synthesised,#CDC575
+big.mp4,ok,,,262,60.0,0.41,2,143.1,68.1,26,PULLDOWN: duplicated frame every 2 frames -- run the retiming repair cell,Beagle,Beagle,Beagle,Great Dane,False,0.06,0.6,0.0,synthesised,#2E2B2D
+blackbig.mp4,ok,,,106,24.0,0.057,,54.6,112.8,84,IRREGULAR FREEZES (VFR video?) -- retiming still applies but check the result,Labrador,Labrador,German Shepherd,Pug,False,0.01,0.35,0.0,synthesised,#090706
+chai.mp4,ok,,,291,30.0,0.169,6,269.7,160.1,18,PULLDOWN: duplicated frame every 6 frames -- run the retiming repair cell,Samoyed,Samoyed,Cardigan Corgi,Samoyed,False,0.188,0.35,0.0,synthesised,#7F370C
+dan.mp4,ok,,,627,30.0,0.0,,161.4,166.3,41,CLEAN frame timing,Whippet,Whippet,Whippet,Whippet,True,0.18,0.35,0.0,synthesised,#34333C
+keji_cut.mp4,ok,,,299,30.0,0.0,,52.5,135.1,0,CLEAN frame timing,Siberian Husky,Siberian Husky,Cardigan Corgi,Siberian Husky,False,0.25,0.35,0.0,synthesised,#AA7B3C
+lachang.mp4,ok,,,306,30.0,0.164,,21.9,149.1,0,IRREGULAR FREEZES (VFR video?) -- retiming still applies but check the result | LOW SHARPNESS: expect noisy keypoints,Basset Hound,Great Dane,Basset Hound,Great Dane,False,0.103,0.35,0.0,synthesised,#35231B
+smy.mp4,ok,,,247,60.0,0.053,,279.3,92.6,113,IRREGULAR FREEZES (VFR video?) -- retiming still applies but check the result,Samoyed,Samoyed,Basset Hound,Samoyed,False,0.537,0.35,3.8,synthesised,#E1F0FF

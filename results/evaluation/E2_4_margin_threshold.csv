@@ -1,0 +1,5 @@
+rule,clips below,A-rate below,A-rate above
+margin <= 0.040 (lowest 10%),5,80% (4/5),43% (16/37)
+margin <= 0.064 (lowest 25%),11,55% (6/11),45% (14/31)
+margin <= 0.221 (lowest 50%),21,62% (13/21),33% (7/21)
+margin <= 0.487 (lowest 75%),31,52% (16/31),36% (4/11)

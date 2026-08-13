@@ -1,0 +1,5 @@
+measure,count,rate,
+clips with a template,42,,
+classifier and geometry agree,5,12%,
+A-grade rate when they AGREE,,40% (2/5),
+A-grade rate when they DISAGREE,,49% (18/37),
