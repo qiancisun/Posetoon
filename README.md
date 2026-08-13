@@ -2,7 +2,7 @@
 
 A rigged 2D cartoon dog, animated from ordinary video of a real one.
 
-MSc project, Bournemouth University.
+
 
 ---
 
