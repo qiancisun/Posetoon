@@ -8,35 +8,23 @@ MSc project, Bournemouth University.
 
 ## Overview
 
-Given a short clip of a dog **in profile**, the pipeline:
-
-1. tracks the animal's skeleton with a pose estimator
-2. measures its bone proportions
-3. picks one of twelve breed templates and deforms it **partway** toward those measurements
-4. samples the coat colour from the footage
-5. drives the character with the tracked motion
+Given a short clip of a dog in profile, the pipeline tracks its skeleton,
+measures its bone proportions, picks one of twelve breed templates and deforms
+it partway toward those measurements, samples the coat colour from the footage,
+and drives the character with the tracked motion.
 
 The output is a three-panel comparison: the source video, the tracked skeleton,
 and the character, playing in step.
 
-The character is not a copy of the animal. The blend factor sits at 0.35 for
-most clips, so roughly a third of its proportions come from the dog in the
-video and the rest from its breed template. "Partway" is the accurate word and
-the results are reported that way.
-
-### Scope
-
-- no fur, muscle or three-dimensional volume
-- footage shot from above cannot be handled at all — a flat rig has nowhere to
-  put limbs that foreshorten toward the spine
-- one dog, side on, in a continuous shot
+Scope: one dog, side on, in a continuous shot. Footage shot from above is
+outside what a flat rig can represent.
 
 ---
 
 ## Repository structure
 
 ```
-project pipeline main code/     the pipeline: seven stages plus the modules they import
+project pipeline main code/     the pipeline
   tool notebook/                screening, grading, evaluation and ablation scripts
   results and data/             breed templates, grades, evaluation tables and figures
 Old version notebook/           46 superseded versions, kept as a record of the work
@@ -44,8 +32,42 @@ Webpage code/                   a Streamlit front end
 Demo video/                     the delivered clips, by grade
 ```
 
-`run_all.py` gives every clip its own working directory, so no clip can pick up
-another's intermediate files.
+### project pipeline main code
+
+The seven stages, run in order by `run_all.py`, plus the modules they import.
+
+| | |
+|---|---|
+| `0_build_breed_templates.py` | builds the twelve breed templates from photographs |
+| `1_extract_keypoints.py` | pose estimation |
+| `2_repair_keypoints.py` | duplicate-frame retiming, outlier rejection, smoothing |
+| `3_coat_colour.py` | samples the coat colour from the torso |
+| `4_select_breed.py` | chooses a template from appearance and skeletal geometry |
+| `posetoon_pipeline.py` | rigging, motion retargeting and rendering |
+| `breeds.py` | the twelve breed definitions |
+| `posetoon_aline.py` | template blending and appearance parameters |
+| `character_style.py` | builds the character's part geometry |
+| `breed_markings.py` | breed markings and coat retinting |
+| `run_one.py` / `run_all.py` | one clip / a folder of clips |
+| `reencode_h264.py` | transcodes the renders for playback |
+
+### tool notebook
+
+Screening (`check_videos.py`, `check_camera_elevation.py`, `find_clean_windows.py`),
+grading (`promote_grades.py`, `sort_by_grade.py`, `apply_grades.py`), batch
+helpers (`fix_summary.py`, `make_reel.py`, `scan_cells.py`), diagnostics
+(`diagnose_coat.py`, `audit_clips.py`, `breed_gallery.py`), and the evaluation
+and ablation scripts (`evaluate_results.py`, `ablation_E1_alpha.py`,
+`ablation_E2_template_selection.py`, `ablation_E3_E5.py`,
+`ablation_E4_cartoon_vs_real.py`).
+
+### results and data
+
+`breed_templates.json` — the twelve templates.
+`grades.txt` — every clip's grade and the reason where it was rejected.
+`batch_summary.csv` — per-clip template, blend factor, coat colour and quality measurements.
+`evaluation/` — the evaluation and ablation tables, figures and summaries.
+`evaluation_notebook.py` — a marimo notebook that displays all of it.
 
 ---
 
@@ -65,13 +87,7 @@ pip install streamlit
 streamlit run "Webpage code/app_streamlit.py"
 ```
 
-Datasets are not included here — see [DATA.md](DATA.md) for where to get them
-and what was derived from them.
-
----
-
-Evaluation tables, figures and written summaries are in
-`results and data/evaluation/`. An interactive view:
+The evaluation, interactively:
 
 ```bash
 marimo edit "project pipeline main code/tool notebook/evaluation_notebook.py"
@@ -81,146 +97,24 @@ marimo edit "project pipeline main code/tool notebook/evaluation_notebook.py"
 
 ## Datasets
 
-None of the datasets are committed here — together they run to several
-gigabytes, more than a repository should carry. All three are public and can be
-obtained from their original sources:
+Three public datasets are used. None are committed here — together they run to
+several gigabytes.
 
-| Dataset | Original source |
-|---|---|
-| AP-10K | https://github.com/AlexTheBad/AP-10K |
-| Stanford Dogs | http://vision.stanford.edu/aditya86/ImageNetDogs/ |
-| SyDog-Video | https://github.com/MoritzKappel/SyDog-Video |
+| Dataset | Used for | Original source |
+|---|---|---|
+| AP-10K | animal pose annotations; the pose estimator was pretrained on it | https://github.com/AlexTheBad/AP-10K |
+| Stanford Dogs | breed photographs, used to build the twelve templates | http://vision.stanford.edu/aditya86/ImageNetDogs/ |
+| SyDog-Video | synthetic dog video annotations | https://github.com/MoritzKappel/SyDog-Video |
 
-The copies actually used here are also mirrored in a single archive, in the
-directory layout the scripts expect (`ap10k/`, `sydogvideo/`, and the Stanford
-Dogs `Images/` folder):
+The copies used here are mirrored in one archive, in the directory layout the
+scripts expect:
 
-**https://drive.google.com/file/d/1F_U4w2fFzI20pf9DMg88siP4BOTmntfv/view?usp=sharing**
-
-What each was used for is set out below.
-
-### AP-10K
-
-Pose annotations for animals, used for two things: the pose estimator this
-project runs was pretrained on it, and its ground-truth keypoints were used to
-study how much dog body proportion actually varies.
-
-- Official: https://github.com/AlexTheBad/AP-10K
-- What was taken from it: 1,129 dog annotations, of which 269 survived removing
-  those with no annotated spine points and applying a side-on view filter
-- What that established: leg-to-spine ratio varies by a factor of 2.37 between
-  the 90th and 10th percentile, so body proportion is a real signal
-- Note: this study set the thresholds for an earlier three-tier size system,
-  which the twelve breed templates later replaced. It is background to the work
-  rather than the basis of the delivered system.
-
-### Stanford Dogs
-
-Breed photographs, used to build the twelve breed templates.
-
-- Official: http://vision.stanford.edu/aditya86/ImageNetDogs/
-- What was taken from it: 52-60 photographs per breed, for twelve breeds
-- Derived artefact committed to this repository:
-  `results and data/breed_templates.json` — per-breed bone measurements,
-  appearance parameters, sample count and interquartile range
-
-### SyDog-Video
-
-Synthetic dog video annotations, downloaded for evaluation but not used in the
-delivered results.
-
-- Official: https://github.com/MoritzKappel/SyDog-Video
-
-### Video footage
-
-The clips in `Demo video/` are results, not sources. Source footage came from
-Pexels and Pixabay under their free licences, plus clips recorded by the author.
-Screening used `check_videos.py`: side-on view, one dog, at least 40 usable
-frames, no cuts.
-
-### Rebuilding the templates
-
-With Stanford Dogs downloaded and its path set inside the script:
-
-```bash
-python 0_build_breed_templates.py
-```
-
-This is the only stage that needs a dataset; everything else runs from a video.
-
----
-
-## Key findings
-
-**The automatic quality screen does not predict quality.** Most clips a human
-rejected had been called clean by the pipeline's own check. Sharpness,
-brightness and duplicate-frame rate describe *encoding*, while clips were
-rejected for *camera geometry* and *what the animal was doing*. A sharpness
-figure is blind to a dog filmed from above by construction.
-
-**Averaging two estimators is not a decision.** Where the classifier and the
-geometry disagree, the weighted sum of their scores can peak on a template
-neither proposed. On one clip geometry chose a short-legged breed at 0.373, the
-classifier a long-legged one at 0.596, and the combination selected a third at
-0.489 — almost exactly their arithmetic mean. At low confidence the right
-response is to refuse, not to compromise.
-
-**The failures that cost most did not crash.** They completed and returned a
-plausible wrong answer: a unit-conversion error that trimmed the wrong segment
-without complaint; a criterion that correctly reasoned about when the geometric
-estimator would be unreliable, printed its conclusion, and was consumed by
-nothing.
-
----
-
-## Limitations
-
-The first two groups are properties of the input rather than of the
-implementation. The third is not, and is the more interesting of them. The
-thesis records all of them in full.
-
-**Data and projection.** Monocular 2D tracking cannot recover footage shot from
-above, or a dog turning toward the camera. AP-10K annotates only the neck and
-the root of the tail along the torso, so spinal flexion is inferred rather than
-measured and the tail has no keypoints at all. Limb *width* is never measured,
-only bone length. Coat colour comes from a single sampled base, which suits a
-solid-coloured dog and cannot express a tricolour hound or a merle collie.
-
-**Evaluation.** Grades are one person's judgement on one viewing, with no second
-rater and no blinding. E4 excluded 3 of 20 clips after inspecting the overlays —
-one where the segmenter classified a white Samoyed as *sheep*, two where the
-mask picked up a second animal or a patch of background. That exclusion rate is
-reported as part of the result rather than tidied away.
-
-### Animation problems, not tracking problems
-
-Several of the defects a viewer notices are not caused by imprecise tracking,
-and more tracking accuracy would not remove them. They are places where the
-character does not follow how animation is normally constructed.
-
-- **Head turning is not represented.** The head is a rigid part on a rigid neck,
-  so a dog looking around reads as the whole body rotating.
-- **The tail does not respond to the body.** It lags the body axis, so when the
-  body bounces the tail does not answer it, and when the body is still the tail
-  is still too. Real tail motion carries follow-through and overlapping action;
-  neither is modelled.
-- **Occlusion produces visible instability.** Where one limb crosses another the
-  tracked confidence drops and the drawn limb wavers. An animator would hold or
-  ease through such a passage rather than follow the data frame by frame.
-- **Animation principles are largely absent** — anticipation, follow-through,
-  easing and weight are not part of the retargeting, which maps tracked angles
-  onto the rig directly.
-
-The fix for these is animation technique and anatomical constraint, not better
-tracking: an anatomically jointed neck and head, a tail driven by body
-acceleration, and easing applied where the tracked signal is least trustworthy.
+https://drive.google.com/file/d/1F_U4w2fFzI20pf9DMg88siP4BOTmntfv/view?usp=sharing
 
 ---
 
 ## Note on pretrained models
 
 No model was trained here. Pose estimation uses a network pretrained on AP-10K;
-breed appearance uses an ImageNet-pretrained classifier without retraining. Both
-are used within their competence — the classifier chooses *appearance* and is
-explicitly not trusted for *measurement*, which comes from geometry instead.
-What is claimed is the system and the design decisions in it.
+breed appearance uses an ImageNet-pretrained classifier without retraining. The
+classifier chooses appearance only; body proportion is measured from geometry.
