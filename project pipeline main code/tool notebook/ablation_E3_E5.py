@@ -312,7 +312,8 @@ def main():
              "difference between them." % ref_clip)
     L.append("- E5 bands are small. A rate computed on a handful of clips is a "
              "count, not a probability.")
-    L.append("- **E4 (cartoon vs real outline IoU) is NOT re-run here.** It "
+    L.append("- **E4 was re-run separately; see SUMMARY_E4.md.** The note below "
+         "records the reasoning that first ruled it out, which was wrong. It "
              "needs the animated render, which lives inside the pipeline "
              "notebook and cannot be imported. The 2025-07-29 E4 numbers "
              "belong to the removed size-tier system and should be reported as "

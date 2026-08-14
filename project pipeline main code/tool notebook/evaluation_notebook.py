@@ -44,8 +44,9 @@ def _():
         "here is recomputed, simulated or hand-entered.\n\n"
         "Sections: **audit** of the delivered batch, then **E1** (template / "
         "measurement blend), **E2** (which template was chosen), **E3** "
-        "(character detail), **E5** (which footage works). **E4** is absent "
-        "and the reason is at the end."
+        "(character detail), **E5** (which footage works), **E4** (character "
+        "against the real dog). "
+        "The note at the end records why E4 was at first judged impossible."
     )
     return EVAL_DIR, csv, ev, mo, os
 

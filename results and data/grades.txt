@@ -54,9 +54,9 @@ C  18032366-hd_720_1280_30fps  high camera: corgi shot from above
 C  19828393-hd_1280_720_24fps  breed decision not corroborated (alpha 0.60)
 C  3644110-hd_1280_720_30fps  high camera: dachshund shot from above, rig cannot represent it
 A  5540218-hd_720_1280_30fps  duplicate frame rate 17%; only 55 frames
-C  7682707-hd_1280_720_25fps  duplicate frame rate 38%; breed decision not corroborated (alpha 0.60); 84% of frames rejected as outliers
-C  7684003-uhd_3840_2160_25fps_cut  76% of frames rejected as outliers
-C  8056259-hd_1280_720_25fps  breed decision not corroborated (alpha 0.60); 70% of frames rejected as outliers
+C  7682707-hd_1280_720_25fps  duplicate frame rate 38%; breed decision not corroborated (alpha 0.60); 0.84 outlier rejections per frame
+C  7684003-uhd_3840_2160_25fps_cut  0.76 outlier rejections per frame
+C  8056259-hd_1280_720_25fps  breed decision not corroborated (alpha 0.60); 0.70 outlier rejections per frame
 A  bg  no gait: front limb swing 6 deg
 C  big  duplicate frame rate 41%; breed decision not corroborated (alpha 0.60)
 A  lachang  duplicate frame rate 16%

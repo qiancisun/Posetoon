@@ -1,6 +1,6 @@
 # E1 -- the template/measurement blend
 
-Replaces the 2025-07-29 E1, which searched for an optimal alpha on the removed size-tier system and correctly found none: alpha is a regularisation strength, not a quantity with an optimum. The useful question is what the SHIPPED setting actually preserves.
+Replaces the 2026-07-29 E1, which searched for an optimal alpha on the removed size-tier system and correctly found none: alpha is a regularisation strength, not a quantity with an optimum. The useful question is what the SHIPPED setting actually preserves.
 
 ## E1.1 -- what the delivered characters kept
 
