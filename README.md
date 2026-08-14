@@ -1,6 +1,6 @@
 # PoseToon
 
-Turning video of a dog into a rigged 2Dcharacter that reflects its bredd
+Turning video of a dog into a rigged 2Dcharacter that reflects its breed.
 
 
 ---
