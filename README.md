@@ -59,7 +59,7 @@ helpers (`fix_summary.py`, `make_reel.py`, `scan_cells.py`), diagnostics
 (`diagnose_coat.py`, `audit_clips.py`, `breed_gallery.py`), and the evaluation
 and ablation scripts (`evaluate_results.py`, `ablation_E1_alpha.py`,
 `ablation_E2_template_selection.py`, `ablation_E3_E5.py`,
-`ablation_E4_cartoon_vs_real.py`).
+`ablation_E4_cartoon_vs_real.py`, `make_figs.py`).
 
 ### results and data
 
