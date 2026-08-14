@@ -11,6 +11,14 @@ Nothing in the pipeline is imported or re-run. This is why the measurement was p
 ## Result
 
 - 19 clip(s) scored; median IoU **0.415** (range 0.282-0.623).
+- That figure is unfiltered. Two of the 19 were excluded after inspecting the
+  overlays: on `12438625` the segmenter merged two dogs into a single region,
+  and on `16170693_720_1280_24fps_cut` a large background area was labelled as
+  dog. In both the union is inflated by a mask that is wrong, not by a
+  character that is wrong. **The thesis reports the remaining 17 clips: median
+  IoU 0.437, range 0.302-0.623.** Both numbers are kept here because the
+  exclusions were made by eye, not by a criterion the script applies, and that
+  distinction should be visible rather than tidied away.
 - Frames where segmentation returned no dog: **13**. Those are excluded rather than scored, and the exclusion rate is itself a result -- it says how often an off-the-shelf segmenter fails on this kind of footage.
 
 ## Read the overlays before quoting the number

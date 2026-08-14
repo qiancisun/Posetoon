@@ -61,4 +61,4 @@ A  bg  no gait: front limb swing 6 deg
 C  big  duplicate frame rate 41%; breed decision not corroborated (alpha 0.60)
 A  lachang  duplicate frame rate 16%
 C  MicrosoftTeams-video (1) (8)_cut  duplicate frame rate 53%
-C  MicrosoftTeams-video (2) (7)  151% of frames rejected as outliers
+C  MicrosoftTeams-video (2) (7)  1.51 outlier rejections per frame (counted per keypoint, so the rate can exceed 1)
