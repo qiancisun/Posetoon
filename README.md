@@ -1,7 +1,6 @@
 # PoseToon
 
-A rigged 2D cartoon dog, animated from ordinary video of a real one.
-
+Turning video of a dog into a rigged 2Dcharacter that reflects its bredd
 
 
 ---
