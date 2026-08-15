@@ -96,8 +96,7 @@ marimo edit "project pipeline main code/tool notebook/evaluation_notebook.py"
 
 ## Datasets
 
-Three public datasets are used. None are committed here — together they run to
-several gigabytes.
+Three public datasets are used. None are committed here. If you wish to download them, please click on the following link.
 
 | Dataset | Used for | Original source |
 |---|---|---|
