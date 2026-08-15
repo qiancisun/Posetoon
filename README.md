@@ -104,8 +104,7 @@ Three public datasets are used. None are committed here. If you wish to download
 | Stanford Dogs | breed photographs, used to build the twelve templates | http://vision.stanford.edu/aditya86/ImageNetDogs/ |
 | SyDog-Video | synthetic dog video annotations | https://cvssp.org/data/SyDogVideo/ |
 
-The copies used here are mirrored in one archive, in the directory layout the
-scripts expect:
+I have compressed all the datasets and uploaded them to the following Google Drive：
 
 https://drive.google.com/file/d/1F_U4w2fFzI20pf9DMg88siP4BOTmntfv/view?usp=sharing
 
